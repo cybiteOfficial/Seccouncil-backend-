@@ -29,8 +29,9 @@ app.use(
 	cors({
 		// origin:"http://localhost:3000",
 		// origin:"https://seccouncil-seccouncils-projects.vercel.app",
-		origin:"https://www.seccouncil.com",
 		// origin:"https://studynotion-frontend-six-henna.vercel.app",
+		origin:"https://www.seccouncil.com",
+		methods: ['GET', 'POST', 'PUT', 'DELETE'],
 		credentials:true,
 	})
 )
