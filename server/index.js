@@ -28,9 +28,8 @@ app.use(cookieParser());
 app.use(
 	cors({
 		// origin:"http://localhost:3000",
-		// origin:"https://seccouncil-seccouncils-projects.vercel.app",
-		// origin:"https://studynotion-frontend-six-henna.vercel.app",
-		origin:"https://www.seccouncil.com",
+		// origin:"https://www.seccouncil.com",
+		origin:"https://sec-council.vercel.app",
 		methods: ['GET', 'POST', 'PUT', 'DELETE'],
 		credentials:true,
 	})
