@@ -15,6 +15,7 @@ const dotenv = require("dotenv");
 
 
 const categoryRoutes = require("./routes/Category");
+const adminRoutes = require("./routes/Admin");
 
 dotenv.config();
 const PORT = process.env.PORT || 4000;
