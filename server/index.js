@@ -54,6 +54,8 @@ app.use("/api/v1/reach", contactUsRoute);
 
 app.use("/api/v1/category", categoryRoutes);
 
+app.use("/api/v1/admin", adminRoutes);
+
 //def route
 
 app.get("/", (req, res) => {
