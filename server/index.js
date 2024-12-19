@@ -13,6 +13,7 @@ const {cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const categoryRoutes = require("./routes/Category");
+const adminRoutes = require("./routes/Admin");
 
 dotenv.config();
 const PORT = process.env.PORT || 4000;
@@ -51,6 +52,8 @@ app.use("/api/v1/payment", paymentRoutes);
 app.use("/api/v1/reach", contactUsRoute);
 
 app.use("/api/v1/category", categoryRoutes);
+
+app.use("/api/v1/admin", adminRoutes);
 
 //def route
 
