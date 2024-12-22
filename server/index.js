@@ -12,8 +12,6 @@ const cors = require("cors");
 const {cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
-
-
 const categoryRoutes = require("./routes/Category");
 const adminRoutes = require("./routes/Admin");
 
