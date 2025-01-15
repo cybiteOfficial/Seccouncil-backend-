@@ -9,7 +9,7 @@ const contactUsRoute = require("./routes/Contact");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const {cloudinaryConnect } = require("./config/cloudinary");
+const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const categoryRoutes = require("./routes/Category");
@@ -22,25 +22,23 @@ const PORT = process.env.PORT || 4000;
 database.connect();
 //middlewares
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))//for using postman
+app.use(express.urlencoded({ extended: true })); //for using postman
 app.use(cookieParser());
 app.use(
-	cors({
-		origin:"http://localhost:3000",
-		// origin:"https://www.seccouncil.com",
-		// origin:"https://sec-council.vercel.app",
-		// origin:"https://seccouncil.com",
-		methods: ['GET', 'POST', 'PUT', 'DELETE'],
-		credentials:true,
-	})
-)
+  cors({
+    // origin: "http://localhost:3000",
+    origin: "https://seccouncil.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(
-	fileUpload({
-		useTempFiles:true,
-		tempFileDir:"/tmp",
-	})
-)
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp",
+  })
+);
 //cloudinary connection
 cloudinaryConnect();
 
@@ -58,13 +56,12 @@ app.use("/api/v1/admin", adminRoutes);
 //def route
 
 app.get("/", (req, res) => {
-	return res.json({
-		success:true,
-		message:'Your server is up and running....'
-	});
+  return res.json({
+    success: true,
+    message: "Your server is up and running....",
+  });
 });
 
 app.listen(PORT, () => {
-	console.log(`App is running at ${PORT}`)
-})
-
+  console.log(`App is running at ${PORT}`);
+});
