@@ -67,7 +67,7 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
       
       <body>
           <div class="container">
-              <a href="https://studynotion-frontend-six-henna.vercel.app"><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
+              <a href="https://seccouncil.com/"><img class="logo" src="https://seccouncil.com/static/media/Logo-Full-Light.a2366d6bc7fe22e47301.jpg"
                       alt="StudyNotion Logo"></a>
               <div class="message">Course Payment Confirmation</div>
               <div class="body">
@@ -77,7 +77,7 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
                   <p>Your Order ID is <b>${orderId}</b></p>
               </div>
               <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-                      href="mailto:info@studynotion.com">info@studynotion.com</a>. We are here to help!</div>
+                      href="mailto:info@Seccouncil.com">info@Seccouncil.com</a>. We are here to help!</div>
           </div>
       </body>
       
