@@ -25,7 +25,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //for using postman
 app.use(cookieParser());
 app.use(
-<<<<<<< HEAD
   cors({
     // origin: "http://localhost:3000",
     origin: "https://seccouncil.com",
@@ -33,17 +32,6 @@ app.use(
     credentials: true,
   })
 );
-=======
-	cors({
-		// origin:"http://localhost:3000",
-		// origin:"https://www.seccouncil.com",
-		// origin:"https://sec-council.vercel.app",
-		origin:"https://seccouncil.com",
-		methods: ['GET', 'POST', 'PUT', 'DELETE'],
-		credentials:true,
-	})
-)
->>>>>>> cc4c3bce3bbe10a92289ed1df6ed7171f0ab09c7
 
 app.use(
   fileUpload({
