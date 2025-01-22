@@ -71,7 +71,7 @@ const userSchema = new mongoose.Schema(
         ref: "courseProgress",
       },
     ],
-    phoneNumber: {
+    contactNumber: {
       type: String,
       required: true,
       trim: true,
